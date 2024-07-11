@@ -57,7 +57,6 @@ Desktop.ini
 go.work
 
 # Go modules
-vendor/
 go.sum
 
 # Protobuf-generated files
@@ -84,7 +83,6 @@ coverage/
 
 # Dependency directories
 dep/
-vendor/
 .godeps/
 
 # IDE-specific files

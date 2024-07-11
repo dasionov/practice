@@ -22,7 +22,7 @@ func main() {
 	domainConn := createLibvirtConnection(*runWithNonRoot)
 	defer domainConn.Close()
 
-	domainManager, err := virtwrap.NewLibvirtDomainManager(domainConn, *virtShareDir, *ephemeralDiskDir, &agentStore, *ovmfPath, ephemeralDiskCreator, metadataCache)
+	domainManager, err := virtwrap.MockDomainManager{}(domainConn, *virtShareDir, *ephemeralDiskDir, &agentStore, *ovmfPath, ephemeralDiskCreator, metadataCache)
 	if err != nil {
 		log.Fatalf("Failed to create domain manager: %v", err)
 	}
