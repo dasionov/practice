@@ -13,7 +13,7 @@ func main() {
 	filePath := client.ReadFilePath()
 
 	// Set a context with timeout
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second*5)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second*20)
 	defer cancel()
 
 	// Create a gRPC connection

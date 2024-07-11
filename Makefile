@@ -30,7 +30,7 @@ PROTO_GEN=$(PROTO_DIR)/*.pb.go
 # Targets
 all: build
 
-build: $(CLIENT_EXEC) $(SERVER_EXEC)
+build: proto $(CLIENT_EXEC) $(SERVER_EXEC)
 
 $(CLIENT_EXEC): $(SRCDIR)/client/main.go
 	$(GOBUILD) -o $(CLIENT_EXEC) ./$(SRCDIR)/client
